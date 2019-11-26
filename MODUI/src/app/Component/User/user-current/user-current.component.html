@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<br>
+<div class="container">
+	<p style="font-size: large;color: #f1f1f1;">Current Trainings</p>          
+   <table class="table table-hover" style="background: white;">
+	 <thead style="background: #800080a6;">
+	   <tr>
+		 <th>Training Name</th>
+		 <th>Start Date</th>
+		 <th>End Date</th>
+		 <th>Status</th>
+		 <th>Progress</th>
+		 <th>Edit</th>
+
+	   </tr>
+	 </thead>
+	 
+		   <tbody *ngFor="let item of list3">
+				   <tr>
+					   <td>{{item.trainingName}}</td>
+					   <td>{{item.startDate}}</td>
+					   <td>{{item.endDate}}</td>
+					   <td>{{item.status}}</td>
+					   <td>{{item.progress}}</td>
+					   <td><button (click)="showDialog = !showDialog;   GetStatById(item.trainingId)"><a><i class="fa fa-edit" aria-hidden="true"> Edit</i></a></button></td>
+					   
+				   </tr>
+			   </tbody>
+	  
+   </table>
+ </div>
+
+
+ <app-dialog [(visible)]="showDialog">
+    <div class="wrapper wrapper--w790">
+          <div class="card card-5">
+          <div class="card-heading">
+          <h2 class="title" style="color:white;padding-left: 35px; font-size: 25px; ">Edit Status & Progress</h2>
+          </div>
+          <div class="card-body">
+          <form method="POST">
+         <div class="form-row">
+          <div class="name">Status</div>
+          <div class="value">
+          <div class="input-group">
+          <input class="input--style-5" type="text" name="status" [(ngModel)]="list1.status">
+          </div>
+          </div>
+          </div>
+          <div class="form-row">
+          <div class="name">TOC</div>
+          <div class="value">
+          <div class="input-group">
+          <input class="input--style-5" type="text" name="progress" [(ngModel)]="list1.progress">
+          </div>
+          </div>
+          </div>
+         
+          <div>
+          <button class="btn btn--radius-2 btn--red"  (click)="EditStatus()" type="submit">Save</button>
+         
+          <button (click)="showDialog = !showDialog; reload()" class="btn btn--radius-2 btn--red" style="margin-left: 100px;">Close</button>
+          </div>
+        </form>
+          </div>
+          </div>
+          </div>
+          </app-dialog>

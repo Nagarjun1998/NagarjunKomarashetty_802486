@@ -1,0 +1,92 @@
+<!-- <nav class="navbar navbar-inverse" style=" border-color:none;border-radius: 0px; margin-bottom: 0px; border: none;">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav"  style="font-size: 20px;">
+        <li ><a routerLink="mcomplete">Completed Trainings</a></li>
+        <li ><a routerLink="mcurrent">Current Trainings</a></li>
+
+      </ul>
+
+      
+    </div>
+  </nav> -->
+
+
+  <div class="page-wrapper p-t-180 p-b-100 font-robo">
+    <div class="wrapper wrapper--w960">
+        <div class="card card-2">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Your Profile</h2>
+                <form>
+                    <div class="input-group" style="float: left">
+                        <input class="input--style-2" type="text"  placeholder="Full Name" name="mentorName" [(ngModel)]="item1.mentorName" >  
+                        
+                    </div> 
+                    <div class="input-group" style="float: left;padding-left:40px">
+                            <input class="input--style-2" type="email"  placeholder="Email" name="email" [(ngModel)]="item1.email" >  
+                            
+                        </div> 
+                    
+                    <div class="input-group" style="float: left">
+                    <input class="input--style-2" type="text"  placeholder="Password" name="password" id="mpassword" [(ngModel)]="item1.password" >
+                    
+                </div>
+
+                   
+
+                    <div class="input-group" style="float: left; ">
+                        <input class="input--style-2" list="host" placeholder="Select Technology" name="technologies"  [(ngModel)]="item1.technologies"  >
+                        <!-- <datalist id="host">
+                            <option *ngFor="let item1 of list1" value={{item1.skillName}}></option>
+                        </datalist>     -->
+                      
+                    </div>
+                    
+                    <div class="input-group" style="float: left;padding-left:40px"> 
+                            <input class="input--style-2" list="faci" type="text" placeholder="Facilities" name="facilities" [(ngModel)]="item1.facilities" >
+                            <datalist id='faci'>
+                                    <option value="Cloud Labs"></option>
+                                    <option value="Rooms"></option>
+                                    <option value="Rest room"></option>
+                                    <option value="Laptops"></option>
+                                    <option value="Cafeteria"></option>
+                            </datalist>
+                           
+                    </div>
+                   
+                    <div class="input-group" style="float: left;">
+                        <input class="input--style-2" type="number" placeholder="Years Of Experience" name="yearsOfExperience" [(ngModel)]="item1.yearsOfExperience" >
+                        
+                    </div>
+                    
+                    
+                    <div class="input-group" style="float: left;padding-left: 40px">
+                        <input class="input--style-2" type="text" placeholder="LinkedIn Url" name="linkedInUrl" [(ngModel)]="item1.linkedInUrl" >
+                          
+                    </div>
+                    <div class="input-group" style="float: left;">
+                            <input class="input--style-2"  type="text" placeholder="Select Your Preferable TimeSlot" name="timeSlot" [(ngModel)]="item1.timeSlot" >
+                            
+                            
+                           </div>
+                    <div class="input-group"style="float: left;padding-left: 40px" >
+                        <input class="input--style-2" type="text" placeholder="Contact No" name="contactNo" [(ngModel)]="item1.contactNo" >
+                       
+                    </div>
+                    
+   
+                       
+                        <button  class="btn btn--radius btn--green" type="submit">Submit</button>
+                   <div>
+                       
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
